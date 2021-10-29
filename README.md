@@ -2,7 +2,7 @@
 
 ### In Collaboration With
 
-- [Jeff Warchall]()
+- [Jeff Warchall](https://jeffwarchall.com/)
 - [Adam Swan](https://acswan9690.github.io/)
 
 ---
