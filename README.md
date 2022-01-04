@@ -15,13 +15,13 @@ To help the California Department of Forestry and Fire Protection allocate resou
 
 ### Executive Summary
 
-Machine learning algorithms are some of the most powerful and interesing tools in tech right now and their applications are nearly limitless.  From predicting stock prices to determining how likely someone is to have cancer, we can use them to help us anticipate the future.  In this project, our team sought to predict whether there would be a wildfire in locations of California using historical fire and weather data between 2008 and 2020.  We know weather conditions are highly colinear in that every variable changes as a direct result of another.  Fire likelihood is also a direct result of weather conditions in that heat usually leads to dryness and dryness leads to more ignition sources resulting in an elevated fire risk.  Because of these correlations we wanted to see if we could predict whether I fire is likely to occur somewhere using this historical data.
+Machine learning algorithms are some of the most powerful and interesting tools in tech right now and their applications are nearly limitless.  From predicting stock prices to determining how likely someone is to have cancer, we can use them to help us anticipate the future.  In this project, our team sought to predict whether there would be a wildfire in locations of California using historical fire and weather data between 2008 and 2020.  We know weather conditions are highly colinear in that every variable changes as a direct result of another.  Fire likelihood is also a direct result of weather conditions in that heat usually leads to dryness and dryness leads to more ignition sources resulting in an elevated fire risk.  Because of these correlations we wanted to see if we could predict whether I fire is likely to occur somewhere using this historical data.
 
 
 **1. Sample details:**
 - 10,988 total entries from every month between 2008 - 2020
-- Multi-indexing for instances of multiple fires at different locations occuring in the same month and year
-- 4,279 occurences of fire within our combined dataset
+- Multi-indexing for instances of multiple fires at different locations occurring in the same month and year
+- 4,279 occurrences of fire within our combined dataset
 - 6,709 entries without record of a fire starting
 
 **2. Sources:**
@@ -54,13 +54,13 @@ Machine learning algorithms are some of the most powerful and interesing tools i
 |**CAUSE**|*float*|The cause of the fire.|
 |**lat**|*float*|The latitude coordinate of the center of the county in which the fire was located.|
 |**long**|*float*|The longitude coordinate of the center of the county in which the fire was located.|
-|**GIS_ACRES**|*float*|The total number of arces burned.|
+|**GIS_ACRES**|*float*|The total number of acres burned.|
 
 
 
 **4. Target:**
 
-Four classifiction models were used: Logistic Regression, KNN Classifier, Random Forest Classifier, and Voting Classifier utilizing a KNN Classifier, Random Forest Classifier, and Ada Boost Classifier.
+Four classification models were used: Logistic Regression, KNN Classifier, Random Forest Classifier, and Voting Classifier utilizing a KNN Classifier, Random Forest Classifier, and Ada Boost Classifier.
 
 
 **5. Model Performance:**
@@ -69,8 +69,8 @@ A total of four models were fit using many different parameters.  Listed below a
 
 | Model Type  | Metric  | Score  |
 |---|---|---|
-| **Logisitic Regression**   | *Accuracy*  | 76%  |
-| **Logisitic Regression**  | *Precision*  | 67%  |
+| **Logistic Regression**   | *Accuracy*  | 76%  |
+| **Logistic Regression**  | *Precision*  | 67%  |
 | **Random Forest Classifier**  | *Accuracy*  | 88% |
 | **Random Forest Classifier** | *Precision*  | 84% |
 | **Voting Classifier** | *Accuracy* | 87% |
@@ -81,7 +81,7 @@ A total of four models were fit using many different parameters.  Listed below a
 
 ### Conclusion & Recommendations
 
-Our models were able to predict whether a fire would occur with a surprising level of accuracy.  Out best overall model achieved 88% accuracy while our second best was close behind with a great recall score of 86%.  Due to the danger of wild fires growing out of control and the threat of climate change looming, we recommend the use of our Random Forest model as it postively predicts more fires.  However, it also predicts more false positives meaning there's a higher chance for predicting fires that don't actually happen.  This is where you, the California Department of Forestry and Fire Protection, must prioritize what is most important to you and whether or not you have enough resources and man power to use the above model.
+Our models were able to predict whether a fire would occur with a surprising level of accuracy.  Out best overall model achieved 88% accuracy while our second best was close behind with a great recall score of 86%.  Due to the danger of wild fires growing out of control and the threat of climate change looming, we recommend the use of our Random Forest model as it positively predicts more fires.  However, it also predicts more false positives meaning there's a higher chance for predicting fires that don't actually happen.  This is where you, the California Department of Forestry and Fire Protection, must prioritize what is most important to you and whether or not you have enough resources and man power to use the above model.
 
 If resources are particularly thin the Voting Classifier may be best as it resulted in fewer false positives which would minimize wasted time and resources at the expense of possibly missing out on fires somewhere else.
 
